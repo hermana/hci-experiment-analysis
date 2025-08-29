@@ -11,7 +11,7 @@ MOTIVATION_LIKERT_COLUMNS = ['boring_task', 'enjoyable_task', 'satisfied_perform
 
 MOTIVATION_SHORT_LIKERT_COLUMNS = ['boring_task', 'enjoyable_task', 'satisfied_performance',
        'couldnt_do_well', 'attention', 'effort_task', 'didnt_try_hard',
-       'felt_tense', 'relaxed_task', 'help_memorize_commands', 'skip_remaining_training']
+       'felt_tense', 'relaxed_task', 'help_memorize_commands',  'engagement']  #'skip_remaining_training']
 
 
 MOTIVATION_STATEMENTS = {
@@ -46,5 +46,7 @@ MOTIVATION_STATEMENTS = {
     "Speed": "I was able to complete these tasks quickly",
     "LearningEffort": "I put effort into learning and remembering the icon locations.",
     "Learning": "I learned the icon locations.",
-    "skip_remaining_training": "If I was completing this training session to learn the icon locations in a real software interface, I would skip the rest of the training at this point."
+#     "skip_remaining_training": "If I was completing this training session to learn the icon locations in a real software interface, I would skip the rest of the training at this point."
+    "engagement": "If I was completing this training session to learn the icon locations in a real software interface, I would skip the rest of the training at this point."
+
 }
