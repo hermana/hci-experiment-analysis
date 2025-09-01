@@ -8,6 +8,18 @@ MOTIVATION_LIKERT_COLUMNS = ['boring_task', 'enjoyable_task', 'satisfied_perform
        'PhysicalDemand', 'TemporalDemand', 'Performance', 'Effort',
        'Frustration', 'Accuracy', 'Speed', 'LearningEffort', 'Learning']
 
+MOTIVATION_8_PART_COLUMNS = ['already_memorized', 'dont_want_to_continue','boring_task', 'satisfied_performance','effort_task', 'relaxed_task','help_memorize_commands']
+
+MOTIVATION_8_PART_STATEMENTS = {
+    'already_memorized': "I would skip further training because I have already memorized the locations.",
+    'dont_want_to_continue': "I would skip further training because I do not want to continue doing this task.",
+    'boring_task': "I thought this was a boring task.",
+    'satisfied_performance': "I am satisfied with my performance at this task.", 
+    'effort_task': "I put a lot of effort into this task.",
+    'relaxed_task': "I was very relaxed in doing this task.",
+    'help_memorize_commands': "I think doing this task could help me to memorize the locations of useful commands when I'm using complex software."
+}
+
 
 MOTIVATION_SHORT_LIKERT_COLUMNS = ['boring_task', 'enjoyable_task', 'satisfied_performance',
        'couldnt_do_well', 'attention', 'effort_task', 'didnt_try_hard',
