@@ -53,5 +53,6 @@ def simon_exposures_counter(sequenceLength: int, targetID: str, gameIndex: int):
                     count += 1
     return count
 
-
-# print(simon_exposures_counter(5, '81', 2))  # Expected output: 8
+for i in range(1, 6):
+    # print(simon_exposures_counter(6, '14', i))  # Expected output: 8
+    print(simon_exposures_counter(6, '105', i))  # Expected output: 8
