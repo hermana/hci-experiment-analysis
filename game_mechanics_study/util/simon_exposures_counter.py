@@ -25,17 +25,27 @@ SIMON_GAME_DISTRIBUTION = [
         [6, 5, 4, 3, 2, 1]]
     ]
 
-
 def _getTargetIndex(targetID: str) -> int:
     mapping = {
         '81': 1,
         '138': 2,
-        '16': 3,
+        '71': 3,
         '105': 4,
-        '71': 5,
-        '14': 6  # 81, 138, 16, 105, 71, 14
+        '108': 5,
+        '44': 6 
     }
     return mapping[targetID]
+
+# def _getTargetIndex(targetID: str) -> int:
+#     mapping = {
+#         '81': 1,
+#         '138': 2,
+#         '16': 3,
+#         '105': 4,
+#         '71': 5,
+#         '14': 6 
+#     }
+#     return mapping[targetID]
 
 def simon_exposures_counter(sequenceLength: int, targetID: str, gameIndex: int):
     targetIndex = _getTargetIndex(targetID)
