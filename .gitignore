@@ -3,3 +3,4 @@
 *.txt
 __pycache__/
 .ipynb_checkpoints
+send_out_emails/
