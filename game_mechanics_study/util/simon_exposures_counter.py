@@ -1,3 +1,6 @@
+from typing import List
+
+
 SIMON_GAME_DISTRIBUTION = [
         [[1, 2, 3],
         [1, 2, 3, 4], 
@@ -36,16 +39,6 @@ def _getTargetIndex(targetID: str) -> int:
     }
     return mapping[targetID]
 
-# def _getTargetIndex(targetID: str) -> int:
-#     mapping = {
-#         '81': 1,
-#         '138': 2,
-#         '16': 3,
-#         '105': 4,
-#         '71': 5,
-#         '14': 6 
-#     }
-#     return mapping[targetID]
 
 def simon_exposures_counter(sequenceLength: int, targetID: str, gameIndex: int):
     targetIndex = _getTargetIndex(targetID)
@@ -63,6 +56,35 @@ def simon_exposures_counter(sequenceLength: int, targetID: str, gameIndex: int):
                     count += 1
     return count
 
-for i in range(1, 6):
+
+def _getBlockOrder(block: int) -> List:
+    mapping = {
+        1: [1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 6, 4, 5],
+        2: [2, 1, 4, 2, 6, 3, 4, 1, 2, 6, 4, 3, 1, 2, 6, 4, 6, 5],
+        3: [3, 1, 6, 2, 5, 3, 6, 2, 3, 5, 6, 2, 3, 6, 5, 2, 1, 4],
+        4: [4, 1, 5, 4, 1, 6, 2, 5, 4, 1, 5, 4, 1, 5, 2, 6, 2, 3],
+    }
+    return mapping[block]
+
+def baseline_exposures_counter(block:int, trial, targetID:str):
+    if trial==18 and block==1 and targetID=='108':
+        print("MYSTERY CALL..")
+    counter = 0
+    target = _getTargetIndex(targetID)
+    blockIndex = 1
+
+    while blockIndex <= block:
+        block_order = _getBlockOrder(blockIndex)
+        trialIndex = 0
+        while trialIndex < len(block_order) and (trialIndex <= trial or blockIndex < block):
+            if block_order[trialIndex] == target:
+                counter+=1
+            trialIndex+=1
+        blockIndex+=1
+    return counter
+
+print(baseline_exposures_counter(4, 18, '71'))
+
+# for i in range(1, 6):
     # print(simon_exposures_counter(6, '14', i))  # Expected output: 8
-    print(simon_exposures_counter(6, '105', i))  # Expected output: 8
+    # print(simon_exposures_counter(6, '105', i))  # Expected output: 8
