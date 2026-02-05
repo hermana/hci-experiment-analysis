@@ -13,3 +13,14 @@ FSS_SURVEY_STATEMENTS = {
     "fss_merging_action_and_awareness": "When clicking on icons, I act spontaneously and don't overthink things"
 }
 
+SURVEY_DIMENSIONS = ['imi_interest_enjoyment', 
+                     'imi_effort_importance', 
+                     'imi_value_usefulness', 
+                    'pens_competence',
+                    'pens_intuitive_controls',
+                    'fss_time_transformation_quickly',
+                    "fss_time_transformation_slowly",
+                    "fss_unambiguous_feedback",
+                    "fss_concentration",
+                    "fss_merging_action_and_awareness"
+                    ]
