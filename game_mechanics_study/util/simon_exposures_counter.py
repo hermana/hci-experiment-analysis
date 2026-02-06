@@ -67,8 +67,6 @@ def _getBlockOrder(block: int) -> List:
     return mapping[block]
 
 def baseline_exposures_counter(block:int, trial, targetID:str):
-    if trial==18 and block==1 and targetID=='108':
-        print("MYSTERY CALL..")
     counter = 0
     target = _getTargetIndex(targetID)
     blockIndex = 1
